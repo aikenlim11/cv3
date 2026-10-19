@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Curriculum Vitae of Aiken Ely Lim, IT student and aspiring web developer.">
+  <meta name="author" content="Aiken Ely Lim">
+  <title> Aiken Ely Lim | CV</title>
+ 
+  <!-- ALL DESIGN CODE IS IN THIS ONE STYLE TAG -->
+  <style>
+    /* ---------- Base ---------- */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background-color: #000000;
+      color: #f2f2f2;
+      font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+      line-height: 1.7;
+    }
+    a { color: #ffffff; }
+    a:hover { color: #9a9a9a; }
+ 
+    /* ---------- Navigation ---------- */
+    nav {
+      position: sticky;
+      top: 0;
+      background-color: #000000;
+      border-bottom: 1px solid #262626;
+      padding: 16px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    nav .brand {
+      text-decoration: none;
+      font-weight: bold;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      font-size: 14px;
+    }
+    nav ul { list-style: none; display: flex; flex-wrap: wrap; }
+    nav li { margin-left: 22px; }
+    nav li a {
+      color: #9a9a9a;
+      text-decoration: none;
+      font-size: 13px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+    nav li a:hover { color: #ffffff; }
+ 
+    /* ---------- Header / Profile ---------- */
+    header {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 80px 24px 50px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      border-bottom: 1px solid #262626;
+    }
+    header img {
+      width: 180px;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 2px solid #ffffff;
+      background-color: #0d0d0d;
+      margin-right: 40px;
+      margin-bottom: 20px;
+    }
+    header h1 { font-size: 44px; line-height: 1.1; letter-spacing: -1px; }
+    header .role {
+      color: #9a9a9a;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      font-size: 13px;
+      margin: 10px 0 16px;
+    }
+    header .location { color: #9a9a9a; font-size: 14px; margin-top: 4px; }
+ 
+    /* ---------- Sections ---------- */
+    section {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 50px 24px;
+      border-bottom: 1px solid #262626;
+    }
+    section:last-of-type { border-bottom: none; }
+    h2 {
+      display: inline-block;
+      font-size: 14px;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      color: #9a9a9a;
+      border-bottom: 2px solid #ffffff;
+      padding-bottom: 8px;
+      margin-bottom: 24px;
+    }
+    h3 { font-size: 18px; color: #ffffff; }
+    .meta { color: #9a9a9a; font-size: 14px; }
+ 
+    /* ---------- Education entries ---------- */
+    article {
+      padding: 20px 24px;
+      background-color: #0d0d0d;
+      border: 1px solid #262626;
+      border-left: 3px solid #ffffff;
+      margin-bottom: 18px;
+    }
+    article:last-child { margin-bottom: 0; }
+    article ul { margin: 10px 0 0 20px; color: #9a9a9a; }
+ 
+    /* ---------- Skills ---------- */
+    .skills { list-style: none; }
+    .skills li {
+      display: inline-block;
+      border: 1px solid #333333;
+      background-color: #0d0d0d;
+      padding: 6px 16px;
+      margin: 0 8px 8px 0;
+      font-size: 14px;
+    }
+    .skills li:hover { border-color: #ffffff; }
+ 
+    /* ---------- Table ---------- */
+    table { width: 100%; border-collapse: collapse; background-color: #0d0d0d; }
+    caption { text-align: left; color: #9a9a9a; font-size: 14px; padding-bottom: 8px; }
+    th, td { text-align: left; padding: 12px 16px; border: 1px solid #262626; }
+    th {
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 12px;
+      color: #9a9a9a;
+    }
+ 
+    /* ---------- Achievements ---------- */
+    ol { padding-left: 22px; }
+ 
+    /* ---------- Contact form ---------- */
+    form { max-width: 560px; }
+    form p { margin-bottom: 14px; }
+    label {
+      font-size: 12px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #9a9a9a;
+    }
+    input, textarea {
+      width: 100%;
+      background-color: #0d0d0d;
+      color: #f2f2f2;
+      border: 1px solid #333333;
+      padding: 12px;
+      font-family: inherit;
+      font-size: 16px;
+      margin-top: 6px;
+    }
+    input:focus, textarea:focus { outline: none; border-color: #ffffff; }
+    button {
+      background-color: #ffffff;
+      color: #000000;
+      border: 1px solid #ffffff;
+      padding: 12px 28px;
+      font-size: 14px;
+      font-weight: bold;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+    button:hover { background-color: #000000; color: #ffffff; }
+ 
+    /* ---------- Footer ---------- */
+    footer {
+      text-align: center;
+      padding: 40px 24px;
+      border-top: 1px solid #262626;
+      color: #9a9a9a;
+      font-size: 14px;
+    }
+    footer p + p { margin-top: 6px; }
+ 
+    /* ---------- Mobile ---------- */
+    @media (max-width: 600px) {
+      header { padding-top: 60px; }
+      header h1 { font-size: 32px; }
+      header img { margin-right: 0; }
+    }
+  </style>
+</head>
+ 
+<body>
+ 
+  <!-- ===================== NAVIGATION ===================== -->
+  <nav>
+    <a class="brand" href="#top">[Your Name]</a>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <!-- Change index.html to your group's main page file name -->
+      <li><a href="index.html">Home</a></li>
+    </ul>
+  </nav>
+ 
+  <!-- ===================== HEADER / PROFILE ===================== -->
+  <header id="top">
+    <img src="profile.jpg" alt="Portrait of [Your Full Name]" width="180" height="180">
+    <div>
+      <h1>[Your Full Name]</h1>
+      <p class="role">Information Technology Student</p>
+      <p>
+        <a href="aikenlimely11@gmail.com">aikenlimely11@gmail.com</a>
+        &nbsp;|&nbsp;
+        <a href="tel:+639162645201">+63 916 264 201</a>
+      </p>
+      <p class="location">Puerto Princesa City, Palawan, Philippines</p>
+    </div>
+  </header>
+ 
+  <main>
+ 
+    <!-- ===================== ABOUT ===================== -->
+    <section id="about">
+      <h2>About Me</h2>
+      <p>
+        I am a motivated student with a passion for <strong>web development</strong> and
+        <em>creative problem solving</em>. I enjoy turning ideas into clean, functional websites
+        and I am always eager to learn new technologies. As part of my group's project, I
+        contribute to design, content, and coding.
+      </p>
+    </section>
+ 
+    <!-- ===================== EDUCATION ===================== -->
+    <section id="education">
+      <h2>Education</h2>
+ 
+      <article>
+        <h3>Bachelor of Science in Information Technology</h3>
+        <p class="meta"> Palawan State University &middot; 2026 – Present</p>
+        <ul>
+          <li>Currently enrolled in web development and programming courses</li>
+          <li>Member of the group web project for Modules 1 and 2</li>
+        </ul>
+      </article>
+ 
+      <article>
+        <h3>Senior High School – ICT Programming</h3>
+        <p class="meta"> Palawan National School &middot; 2024 – 2026</p>
+      </article>
+    </section>
+ 
+    <!-- ===================== SKILLS ===================== -->
+    <section id="skills">
+      <h2>Skills</h2>
+      <ul class="skills">
+        <li>HTML5</li>
+        <li>CSS3</li>
+        <li>Basic JavaScript</li>
+        <li>Responsive Design</li>
+        <li>Microsoft Office</li>
+        <li>Teamwork</li>
+        <li>Communication</li>
+      </ul>
+    </section>
+ 
+    <!-- ===================== PROJECTS ===================== -->
+    <section id="projects">
+      <h2>Projects &amp; Experience</h2>
+      <table>
+        <caption>Selected academic work</caption>
+        <thead>
+          <tr>
+            <th scope="col">Project</th>
+            <th scope="col">Role</th>
+            <th scope="col">Year</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Group Website Project</td>
+            <td>Front-end Developer</td>
+            <td>2026</td>
+          </tr>
+          <tr>
+            <td>Personal CV Webpage</td>
+            <td>Designer &amp; Developer</td>
+            <td>2026</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+ 
+    <!-- ===================== ACHIEVEMENTS ===================== -->
+    <section id="achievements">
+      <h2>Achievements</h2>
+      <ol>
+        <li>[Dean's Lister / Honors, if any]</li>
+        <li>[Certificate or seminar attended]</li>
+        <li>[Club or organization role]</li>
+      </ol>
+    </section>
+ 
+    <!-- ===================== CONTACT ===================== -->
+    <section id="contact">
+      <h2>Contact</h2>
+      <form action="mailto:yourname@email.com" method="post" enctype="text/plain">
+        <p>
+          <label for="name">Name</label><br>
+          <input type="text" id="name" name="name" placeholder="Your name" required>
+        </p>
+        <p>
+          <label for="email">Email</label><br>
+          <input type="email" id="email" name="email" placeholder="you@example.com" required>
+        </p>
+        <p>
+          <label for="message">Message</label><br>
+          <textarea id="message" name="message" rows="5" placeholder="Write your message..." required></textarea>
+        </p>
+        <button type="submit">Send</button>
+      </form>
+    </section>
+ 
+  </main>
+ 
+  <!-- ===================== FOOTER ===================== -->
+  <footer>
+    <p>&copy; 2026 [Your Full Name]. All rights reserved.</p>
+    <p><a href="#top">Back to top</a></p>
+  </footer>
+ 
+</body>
+</html>
